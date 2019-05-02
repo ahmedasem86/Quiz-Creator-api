@@ -18,7 +18,7 @@ class CreateAnswersTable extends Migration
             $table->bigInteger('question_id')->unsigned();
             $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
             $table->text('text');
-            $table->string('image')->nullable();
+            $table->string('image')->default('placeholder.png');
             $table->integer('answer_type');
             $table->integer('answer_sumbit_response_type');
             $table->text('answer_sumbit_response')->nullable();

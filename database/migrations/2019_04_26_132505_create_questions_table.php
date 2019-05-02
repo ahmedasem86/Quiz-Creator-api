@@ -17,7 +17,7 @@ class CreateQuestionsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->text('description')->nullable();
-            $table->string('image')->nullable();
+            $table->string('image')->default('placeholder.png');
             $table->timestamps();
         });
     }
